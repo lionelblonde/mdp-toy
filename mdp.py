@@ -49,11 +49,11 @@ class MDP(object):
 # Specify the entities composing the MDP
 state_space = [0, 1]
 action_space = [0, 1]
-transitions = {(0, 0): lambda x: 0 if x < 0.6 else 1,
+transitions = {(0, 0): lambda x: 0 if x < 0.5 else 1,
                (0, 1): lambda x: 0,
                (1, 0): lambda x: 0,
                (1, 1): lambda x: 0}
-rewards = {(0, 0): lambda x: 2 if x < 0.6 else 0,
+rewards = {(0, 0): lambda x: 2 if x < 0.5 else 0,
            (0, 1): lambda x: 3,
            (1, 0): lambda x: 0,
            (1, 1): lambda x: 1000}
